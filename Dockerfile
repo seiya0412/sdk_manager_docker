@@ -63,7 +63,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 
 # install SDK Manager
 USER jetpack
-ARG SDK_MANAGER_DEB_PKG=sdkmanager_0.9.14-4964_amd64.deb 
+ARG SDK_MANAGER_DEB_PKG=sdkmanager_1.0.0-5517_amd64.deb
 COPY deb/${SDK_MANAGER_DEB_PKG} /home/$USERNAME/
 WORKDIR /home/$USERNAME
 RUN sudo apt install ./${SDK_MANAGER_DEB_PKG}
